@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Challenge</title>
+  </head>
+  <body>
+    <header>Branded Game Demo | Glow </header>
+    <main>
+      <canvas id = "gameCanvas"></canvas>
+      <div id="gameStartDiv" class = "gameUI">
+        <h1>Welcome to Glow Challenge!</h1>
+        <p>You have 30 seconds to show your best score and win a prize</p>
+        <p>Click the start button when you are ready</p>
+        <button id="gameStartBtn"><p>start</p>/button>
+      </div>
+
+      <div id="gameEndDiv" class = "gameUI">
+        <p>Game Over</p>
+        <h1>You <span id = "gameWinLoseSpan"></span></h1>
+        <h1>Final score: <span id ="gameEndScoreSpan"></span></h1>
+        <p>Refresh the page to play again</p>
+        <button id="gameClaim"><p>Claim prize now</p>/button>
+    </main>
+    <footer>Created by vSelf Team</footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
