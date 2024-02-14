@@ -33,6 +33,7 @@ class GameScene extends Phaser.Scene{
         this.coinMusic;
         this.bgMusic;
         this.emitter;
+        this.prizetype;
     }
 
     //preload assets before the game starts
@@ -41,12 +42,15 @@ class GameScene extends Phaser.Scene{
         this.load.image("bs", "/assets/basket.png");
         this.load.image("fal", "/assets/bottle.png");
         this.load.audio("coin", "/assets/coin.mp3");
-        this.load.audio("bgM", "/assets/bgMusic.mp3");
+        this.load.audio("bgM", "/assets/red.mp3");
         this.load.image("mon", "/assets/coin.png");
     }
 
     //set up of the game objects once the game starts
     create() {
+
+        this.scene.pause("scene-game");
+
         //background image and position 
         let bg = this.add.image(0, 0, "bg").setOrigin(0,0);
 
@@ -59,7 +63,7 @@ class GameScene extends Phaser.Scene{
         //Music setup
         this.coinMusic = this.sound.add("coin");
         this.bgMusic = this.sound.add("bgM");
-        //this.bgMusic.play();
+        this.bgMusic.play();
 
         //player setup
         this.player = this.physics.add
@@ -141,7 +145,7 @@ class GameScene extends Phaser.Scene{
 
     //Collision with target
     targetHit(){
-        //this.coinMusic.play();//music dzzin
+        this.coinMusic.play();//music dzzin
         this.emitter.start();//emits poins
         this.target.setY(0);
         this.target.setX(this.getRandomX());
@@ -149,6 +153,24 @@ class GameScene extends Phaser.Scene{
         this.textScore.setText(`Score: ${this.points}`);
         this.increaseFallSpeed();
 
+    }
+
+    gameOver(){
+        this.sys.game.destroy(true)
+        if (this.points >= 25){
+            gameEndScoreSpan.textContent = this.points
+            gameWinLoseSpan.textContent = "You won a prize!"
+            this.prizetype = 1
+        } else if (this.points >= 10){
+            gameEndScoreSpan.textContent = this.points
+            gameWinLoseSpan.textContent = "You won a prize!"
+            this.prizetype = 2
+        } else{
+            gameEndScoreSpan.textContent = this.points
+            gameWinLoseSpan.textContent = "Sorry, you lost( Try again!"
+            this.prizetype = 0
+        }
+        gameEndDiv.style.display = "flex"
     }
 
     increaseFallSpeed() {
