@@ -24,7 +24,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-  
+
+button {
+    background-color: #C0A9E2; /* Peach-like background color */
+    color: white; /* White text color */
+    border: 0.5px solid #FFD3D3; 
+    padding: 10px 20px; /* Top/bottom padding of 10px, left/right padding of 20px */
+    font-size: 16px; /* Font size of the text */
+    border-radius: 5px; /* Rounded corners with a radius of 5px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s; /* Smooth transition for the background color when interacting with the button */
+}
+
 header,
 footer {
     display: flex;
@@ -101,7 +112,7 @@ main {
 }
   
 #gameStartBtn:hover{
-    background-color: var(--dkClr);
+    background-color: #FF7DF6;
     border: 0.5px solid var(--liClr);
     color: var(--liClr);
     cursor:pointer;

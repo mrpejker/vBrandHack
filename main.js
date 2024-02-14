@@ -189,7 +189,7 @@ const config = {
         default: "arcade",
         arcade:{
             gravity:{ y:speedDown},
-            debug: true,
+            debug: false,// true if need to see movement patterns highlighted
         },
     },
     scene: [GameScene],
