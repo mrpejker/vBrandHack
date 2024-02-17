@@ -15,6 +15,10 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: url('path-to-background-image.jpg') no-repeat center center fixed; */
+    background-size: cover;
 }
   
 body {
@@ -24,6 +28,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.index-body {
+    background: url('/assets/bk3.png') no-repeat center center fixed;
+  }
 
 button {
     background-color: #C0A9E2; /* Peach-like background color */
@@ -42,6 +50,15 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the flex items horizontally */
+    justify-content: flex-start; /* Align the flex items to the start of the container vertically */
+    width: 100%;
+    padding-top: 20px; /* Add padding at the top */
 }
   
 main {
@@ -119,3 +136,97 @@ main {
 } 
 
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100
+    px;
+    height: calc(100% - 40px); /* Adjust based on your header/footer size */
+}
+
+.title {
+    font-size: 2em;
+    color: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.subtitle {
+    color: white;
+    margin-bottom: 2em;
+}
+
+
+
+.community {
+    position: relative;
+    width: calc(23% - 20px); /* Distribute three items evenly with some space for margin */
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden; /* Ensure the background does not bleed outside the border-radius */
+}
+
+.community::before {
+    content: '';
+    position: absolute;
+    top: 10%; /* Move down to allow for the upward shift of the image */
+    left: -7.5%; /* Extend to the left to increase the width */
+    width: 115%; /* Increase the width of the background */
+    height: 115%; /* Increase the height to maintain aspect ratio */
+    background-image: url('/assets/back2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.community img {
+    position: relative;
+    width: 90%; /* Make the image width smaller than the container width */
+    z-index: 2; /* Ensure the image is above the pseudo-element */
+    transform: translateY(-10%); /* Shift the image up */
+    transform: translateX(5%);
+    margin-top: 10%; /* Additional margin at the top */
+}
+
+.description {
+    font-size: 0.9em; /* Smaller font size */
+    color: white;
+    z-index: 2;
+    position: relative; /* Keep relative if you need to layer it above something else */
+    padding: 20px; /* Add padding to the text */
+    width: 80%; /* Limit the width of the text block */
+    margin: 0 auto; /* Center the block horizontally */
+    text-align: center; /* Center text within the block */
+}
+
+.learn-more {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    z-index: 2;
+    position: relative; /* Ensure the link is above the pseudo-element */
+    margin: 10px 0; /* Space between the description and the button */
+}
+
+.learn-more:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+nav {
+    text-align: center;
+    /* padding: 10px 0; */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
