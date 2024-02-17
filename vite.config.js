@@ -6,7 +6,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: '/index.html',
-        game: '/pages/game.html'
+        game: '/pages/game.html',
+        campaign: '/pages/campaign.html'
+
       }
     }
   }
