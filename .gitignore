@@ -33,3 +33,5 @@ _ReSharper*/
 #Nuget packages folder
 packages/
 dist/
+
+node_modules/
