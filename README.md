@@ -1,7 +1,7 @@
 # vBrandHack
 # Project vBrandHack
 
-vBrandHack is a Web3-powered tool for gamified user journeys. In the current prototype, we combine gaming, Avalanche blockchain smart contracts, and Particle user-friendly authorization to build a unique experience for social media marketing (SMM) campaigns. This project was designed and developed during the Avalanche Frontier: Decentralized Consumer Application Hackathon to illustrate the concept of a user engagement platform with a Web3 data management system.  It also shows the potential for a creator economy, inviting users to access a marketplace of SMM campaigns, where they can join as ambassadors and help brands amplify their outreach. 
+vBrandHack is a Web3-powered tool for gamified user journeys. In the current prototype, we combine gaming, Avalanche blockchain smart contracts, and Particle user-friendly authorization to build a unique experience for social media marketing (SMM) campaigns. This project was designed and developed during the Avalanche Frontier: Decentralized Consumer Application Hackathon to illustrate the concept of a user engagement platform with a Web3 data management system.  It also shows the potential for a creator economy, inviting users to access a marketplace of SMM campaigns where they can join as ambassadors and help brands amplify their outreach. 
 
 ## Components
 
@@ -29,6 +29,12 @@ To streamline user access and interaction, the project integrates Particle for w
 - AI assisted content and game creation;
 - Tokenization layer to reward influencers.
 
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+<img width="1358" alt="image" src="https://github.com/mrpejker/vBrandHack/assets/8280427/3fe9527c-8380-42dd-ae1e-6ca8ba832d87">
+
 ## Getting Started
 
 To get started with the project, follow these steps:
@@ -38,8 +44,3 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/mrpejker/vBrandHack.git
    cd vBrandHack
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-<img width="1358" alt="image" src="https://github.com/mrpejker/vBrandHack/assets/8280427/3fe9527c-8380-42dd-ae1e-6ca8ba832d87">
