@@ -14,10 +14,12 @@ import {
 import { ethers } from "ethers";
 import { notification } from "antd";
 import "./App.css";
+import { safeMint1 } from "../../utils/contract";
 const App = () => {
   const { provider } = useEthereum();
   const { connect, disconnect } = useConnect();
   const { userInfo } = useAuthCore();
+
   const smartAccount = new SmartAccount(provider, {
     projectId: import.meta.env.VITE_APP_PROJECT_ID,
     clientKey: import.meta.env.VITE_APP_CLIENT_KEY,
@@ -30,6 +32,7 @@ const App = () => {
     new AAWrapProvider(smartAccount, SendTransactionMode.Gasless),
     "any"
   );
+  const [trxHash, setTrxHash] = useState(null);
   const [balance, setBalance] = useState(null);
   useEffect(() => {
     if (userInfo) {
@@ -103,6 +106,18 @@ const App = () => {
       }),
     });
   };
+  const claimReward = async () => {
+    try {
+      const public_address = userInfo.wallets[0].public_address;
+      const res = await safeMint1(public_address);
+      setTrxHash(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const copyTrxLink = () => {
+    navigator.clipboard.writeText(`https://testnet.snowtrace.io/tx/${trxHash}`);
+  };
   return _jsxs("div", {
     className: "App",
     children: [
@@ -168,16 +183,17 @@ const App = () => {
                 className: "balance-section",
                 children: [
                   _jsxs("small", { children: [balance, " AVAX"] }),
-                  _jsx("button", {
-                    className: "sign-message-button",
-                    onClick: executeUserOp,
-                    children: "Execute User Operation",
-                  }),
-                  _jsx("button", {
-                    className: "sign-message-button",
-                    onClick: executeBatchUserOp,
-                    children: "Execute Batch User Operation",
-                  }),
+                  trxHash !== null
+                    ? _jsxs("button", {
+                        className: "transaction-details",
+                        onClick: copyTrxLink,
+                        children: "Copy trx link",
+                      })
+                    : _jsx("button", {
+                        className: "sign-message-button",
+                        onClick: claimReward,
+                        children: "Claim Reward",
+                      }),
                   _jsx("button", {
                     className: "disconnect-button",
                     onClick: disconnect,
