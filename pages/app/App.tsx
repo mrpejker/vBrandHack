@@ -16,7 +16,6 @@ import { notification } from "antd";
 import "./App.css";
 
 const App = () => {
-  console.log("Hello", process.env);
   const { provider } = useEthereum();
   const { connect, disconnect } = useConnect();
   const { userInfo } = useAuthCore();

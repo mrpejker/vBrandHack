@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         },
       }}
     >
-      <App claim={true} />
+      <App />
     </AuthCoreContextProvider>
   </React.StrictMode>
 );
