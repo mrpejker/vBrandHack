@@ -187,7 +187,7 @@ const App = () => {
                     ? _jsxs("button", {
                         className: "transaction-details",
                         onClick: copyTrxLink,
-                        children: "Copy trx link",
+                        children: "Copy transaction link",
                       })
                     : _jsx("button", {
                         className: "sign-message-button",
