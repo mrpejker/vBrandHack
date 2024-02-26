@@ -38,6 +38,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [User flow](https://youtu.be/cOmzHR1ljxQ): join a campaign as a regular participant, play a branded game, and authorize with Particle to claim your NFT prize.
 
 <img width="1358" alt="image" src="https://github.com/mrpejker/vBrandHack/assets/8280427/3fe9527c-8380-42dd-ae1e-6ca8ba832d87">
+<img width="1214" alt="image" src="https://github.com/mrpejker/vBrandHack/assets/8280427/b284332c-11a4-4d2e-8e7c-0e358020e85f">
+
 
 ## Getting Started
 
