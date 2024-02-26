@@ -33,6 +33,10 @@ To streamline user access and interaction, the project integrates Particle for w
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## Demo
+- [Ambassador flow](https://youtu.be/NG-LlZULArM): join a campaign as an authorized ambassador and get a unique shareble link to your audience;
+- [User flow](https://youtu.be/cOmzHR1ljxQ): join a campaign as a regular participant, play a branded game, and authorize with Particle to claim your NFT prize.
+
 <img width="1358" alt="image" src="https://github.com/mrpejker/vBrandHack/assets/8280427/3fe9527c-8380-42dd-ae1e-6ca8ba832d87">
 
 ## Getting Started
